@@ -40,6 +40,10 @@ public class Deck {
         shuffle();
     }
 
+    public Deck() {
+        cards = new ArrayList<Card>(); // creates empty deck
+    }
+
 
     /**
      * Determines if this deck is empty (no undealt cards).
@@ -120,5 +124,13 @@ public class Deck {
 
         rtn = rtn + "\n";
         return rtn;
+    }
+
+    public void addToTop(Card card) {
+        cards.add(card);
+    }
+
+    public void addToBottom(Card card) {
+        cards.add(0, card);
     }
 }
