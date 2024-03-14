@@ -128,9 +128,11 @@ public class Deck {
 
     public void addToTop(Card card) {
         cards.add(card);
+        size++;
     }
 
     public void addToBottom(Card card) {
         cards.add(0, card);
+        size++;
     }
 }
