@@ -50,12 +50,12 @@ public class WarRunner{
         while (!(quit.equals("y"))) {
             Card computerCard = computerDeck.deal();
             System.out.println("The bot has played a " + computerCard);
-            fieldCards.addToTop(computerCard);
+            fieldCards.addToBottom(computerCard);
             System.out.println("Press the enter button to play a card");
             scan.nextLine();
             Card playerCard = playerDeck.deal();
             System.out.println("You played " + playerCard);
-            fieldCards.addToTop(playerCard);
+            fieldCards.addToBottom(playerCard);
             numPlays++;
 
             // comparison time
@@ -80,7 +80,6 @@ public class WarRunner{
                 for (int i = 0; i < 3; i++) {
                     fieldCards.addToTop(computerDeck.deal());
                     fieldCards.addToTop(playerDeck.deal());
-                    System.out.println(fieldCards);
                 }
                 System.out.println("WAR!!! Whoever wins next will take home 10 cards!");
             }
